@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 @plugin "daisyui";
 
 @theme {
-    --color-primary-color:#23BE0A;
-    --color-skyblue-color:#59C6D2;
-    --font-primary:"Playfair Display", serif;
-    --font-work-sans:"Work Sans", sans-serif;
+  --color-primary-color: #23be0a;
+  --color-skyblue-color: #59c6d2;
+  --font-primary: "Playfair Display", serif;
+  --font-work-sans: "Work Sans", sans-serif;
 }
 
 a.active {
-    border: 1px solid #23BE0A;
-    color: #23BE0A !important;
-    border-color: #23BE0A;
-    border-radius: 8px;
+  border: 1px solid #23be0a;
+  color: #23be0a !important;
+  border-color: #23be0a;
+  border-radius: 8px;
 }

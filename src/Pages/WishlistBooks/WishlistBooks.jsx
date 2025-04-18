@@ -4,22 +4,22 @@ import {IoMdPeople} from "react-icons/io";
 import {MdOutlineFindInPage} from "react-icons/md";
 import { RiCloseLargeLine } from "react-icons/ri";
 import {Link} from "react-router";
-const ReadBooks = ({book,handleRemoveMarkAsListBook}) => {
-  const {
-    bookId,
-    image,
-    bookName,
-    author,
-    tags,
-    totalPages,
-    category,
-    publisher,
-    yearOfPublishing,
-    rating,
-  } = book;
-  
-  return (
-    <div className="p-4 flex flex-col md:flex-row gap-5 md:gap-8 rounded-lg border border-[#13131315]">
+const WishlistBooks = ({book,handleRemoveFromWislist}) => {
+    const {
+        bookId,
+        image,
+        bookName,
+        author,
+        tags,
+        totalPages,
+        category,
+        publisher,
+        yearOfPublishing,
+        rating,
+      } = book
+    console.log(book);
+    return (
+        <div className="p-4 flex flex-col md:flex-row gap-5 md:gap-8 rounded-lg border border-[#13131315]">
       <div className="bg-[#f3f3f3] p-8 rounded-lg">
         <img className="h-44 mx-auto" src={image} alt="" />
       </div>
@@ -77,13 +77,13 @@ const ReadBooks = ({book,handleRemoveMarkAsListBook}) => {
         </div>
       </div>
       <div className="flex items-center justify-center">
-        <Link onClick={()=>handleRemoveMarkAsListBook(bookId)} className="ml-4 p-2 bg-red-500 text-white rounded-full">
+        <Link onClick={()=>handleRemoveFromWislist(bookId)} className="ml-4 p-2 bg-red-500 text-white rounded-full">
             <RiCloseLargeLine className="hidden md:block" size={25}/>
             <span className="md:hidden">Remove From List</span>
         </Link>
       </div>
     </div>
-  );
+    );
 };
 
-export default ReadBooks;
+export default WishlistBooks;

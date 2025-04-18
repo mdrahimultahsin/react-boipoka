@@ -1,6 +1,6 @@
 import React from "react";
 import {Link, useLoaderData, useParams} from "react-router";
-import { addBooksMarkAsRead } from "../../utils/localStorage";
+import { addBooksMarkAsRead, addToWishlist } from "../../utils/localStorage";
 
 const BookDetails = () => {
   const params = useParams().bookId;
@@ -25,6 +25,9 @@ const BookDetails = () => {
 
   const handleMarkAsRead = id =>{
     addBooksMarkAsRead(id)
+  }
+  const handleWishlist = id =>{
+    addToWishlist(id)
   }
 
 
@@ -78,7 +81,7 @@ const BookDetails = () => {
           <Link onClick={()=>handleMarkAsRead(bookId)} className="btn bg-transparent py-6 px-5 rounded-lg font-semibold text-lg border-[#13131315]">
             Mark as Read
           </Link>
-          <Link className="btn bg-skyblue-color text-white py-6 px-5 rounded-lg font-semibold text-lg">
+          <Link onClick={()=>handleWishlist(bookId)} className="btn bg-skyblue-color text-white py-6 px-5 rounded-lg font-semibold text-lg">
             Wishlist
           </Link>
         </div>
